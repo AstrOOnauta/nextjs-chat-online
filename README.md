@@ -5,7 +5,7 @@ Second Project with ReactJS!!
 <hr>
 <div align = "center">
   
-<img src="">
+<img src="https://github.com/AstrOOnauta/nextjs-chat-online/blob/main/preview.gif?raw=true">
  
 </div>
 <br>

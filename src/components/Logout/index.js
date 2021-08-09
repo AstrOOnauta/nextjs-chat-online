@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useRouter } from 'next/router';
+import nookies from "nookies"
 
 const StyledLogout = styled.a`
     display: block;
@@ -14,8 +16,12 @@ const StyledLogout = styled.a`
 `
 
 export default function Logout(props){
+    const router = useRouter()
     return(
-        <StyledLogout href={props.href}>
+        <StyledLogout   href={props.href}
+                        onClick={()=>{  //Destroy Cookie USE_TOKEN when exit button is clicked
+                            nookies.destroy(null, 'USER_TOKEN')
+                            router.push('/login')}}>
             Sair
         </StyledLogout>
     )
